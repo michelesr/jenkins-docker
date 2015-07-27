@@ -4,8 +4,9 @@ MAINTAINER Michele Sorcinelli "mikefender@cryptolab.net"
  
 USER root
 RUN apt-get update \
-      && apt-get install -y docker.io sudo \
+      && apt-get install -y python python-pip sudo \
       && rm -rf /var/lib/apt/lists/*
+RUN pip install -g docker-compose
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
  
 USER jenkins
