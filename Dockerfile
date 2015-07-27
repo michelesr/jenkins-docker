@@ -3,8 +3,8 @@ FROM jenkins:1.596
 MAINTAINER Michele Sorcinelli "mikefender@cryptolab.net"
  
 USER root
-RUN apt-get update 
-      && apt-get install -y sudo 
+RUN apt-get update \
+      && apt-get install -y sudo \
       && rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
  
