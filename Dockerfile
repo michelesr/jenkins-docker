@@ -1,4 +1,4 @@
-FROM jenkins:1.596
+FROM jenkins:latest
 
 MAINTAINER Michele Sorcinelli "mikefender@cryptolab.net"
  
